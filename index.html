@@ -12,47 +12,21 @@
 
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,firefox">
-	<title>git - la guía sencilla</title>
+	<title>git - La guía sencilla</title>
     <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-652147-13']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+   
 </head>
 <body>
     <div class="scrollblock block-title">
                <h1>git - la guía sencilla</h1>
-        <p>una guía sencilla para comenzar con git. sin complicaciones ;)</p>
+        <p>Una guía sencilla para comenzar con git. sin complicaciones y facil de usar :B ;)</p>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="rogerdudler" data-size="large" data-url="http://rogerdudler.github.com/git-guide" data-related="rogerdudler" data-hashtags="git">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <p class="meta">
             por <a href="http://www.twitter.com/rogerdudler">Roger Dudler</a> (traducido por <a href="http://www.twitter.com/lfbarragan">@lfbarragan</a> y <a href="https://twitter.com/adrimatellanes">@adrimatellanes</a>)
             <br />créditos a <a href="http://www.twitter.com/tfnico">@tfnico</a>, <a href="http://www.twitter.com/fhd">@fhd</a> y <a href="http://www.namics.com">Namics</a><br />
-            disponible en
-            <a href="index.html">english</a>,
-            <a href="index.de.html">deutsch</a>,
-            <a href="index.fr.html">français</a>,
-            <a href="index.id.html">indonesian</a>,
-            <a href="index.it.html">italiano</a>,
-            <a href="index.nl.html">nederlands</a>,
-            <a href="index.pl.html">polski</a>,
-            <a href="index.pt_BR.html">português</a>,
-            <a href="index.ru.html">русский</a>,
-            <a href="index.tr.html">türkçe</a>,
-            <br/>
-            <a href="index.my.html">မြန်မာ</a>,
-            <a href="index.ja.html">日本語</a>,
-            <a href="index.zh.html">中文</a>,
-            <a href="index.ko.html">한국어</a>
             <br />
             por favor, reporta cualquier problema en <a href="https://github.com/rogerdudler/git-guide/issues">github</a>
         </p>
@@ -63,7 +37,7 @@
     <div class="scrollblock block-setup">
         <h2>configuración</h2>
         <p>
-            <a href="http://git-scm.com/download/mac">Descarga git para OSX</a>
+            <a href="http://git-scm.com/download/mac">Descarga git para tu android </a>
         </p>
         <p>
             <a href="http://msysgit.github.io/">Descarga git para Windows</a>
@@ -74,19 +48,58 @@
     </div>
     <a name="create"></a>
     <div class="scrollblock block-create">
-        <h2>crea un repositorio nuevo</h2>
+        <h2>Crea un repositorio nuevo en la pagina de github</h2>
+
         <p>
-            Crea un directorio nuevo, ábrelo y ejecuta<br />
-            <code>git init</code><br />
-            para crear un nuevo repositorio de git.
+            Descargar GitBash en windows para ejecutar los comandos en consola <br />
+            <code>git config --list</code><br />
+            Para observar las configuraciones y usuarios que estan registrados<br />
+        </p>
+        <p>
+            Ingresa su usario y email <br />
+            <code>git config --global user.name "brayan-sena"</code><br />
+            para ingresar su usuario de github en consola<br />
+        </p>
+        <p>
+            Ingresa su usario y email <br />
+            <code>git config --global user.email brayan-sena@example.com</code><br />
+            para registar su correo de github en consola<br />
+        </p>
+
+        <p>
+            Ejecutamos Nuevamente para obervar que estemos registrados en consola <br />
+            <code>git config --list</code><br />
+            Efectivamente ya estamos registrados, seguimos con el siguiente paso.<br />
         </p>
     </div>
     <a name="checkout"></a>
     <div class="scrollblock block-checkout">
         <h2>hacer checkout a un repositorio</h2>
         <p>
+            Crear la carpeta repository en el disco c: <br />
+            <code>mkdir</code><br />
+            Ejecutamos el comando y creamos la carpeta llammada repository<br />
+        </p>
+        
+        <p>
+            Indicar en la consola donde nos encontramos   <br />
+            <code>dir</code><br />
+            Ejecutamos el comando nos muestra en que seccion del disco c: se encuetra.<br />
+            
+        </p>
+        <p>
+            Navegar por carpetas  <br />
+            <code>cd c:</code><br />
+            Ejecutamos el comando y va mostrando la carpeta hasta que lleguemos a repository<br />
+            <code>cd repository</code>
+        </p>
+        <p>
+            ya estando ubicados en el repository, ejecutamos  <br />
+            <code>:</git unit ><br />
+           el comando hace que la rama en la carpeta sea master<br />
+        <p>
             Crea una copia local del repositorio ejecutando<br />
-            <code>git clone /path/to/repository</code><br />
+            <code>git clone (link en la pagina github llamada clone or download)</code><br />
             Si utilizas un servidor remoto, ejecuta<br />
             <code>git clone username@host:/path/to/repository</code>
         </p>
